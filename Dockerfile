@@ -1,6 +1,5 @@
 # use "node:alpine" as Base Image https://hub.docker.com/_/node/
-#FROM node:alpine
-FROM node:alpin
+FROM node:alpine
 
 # Install dependencies
 RUN apk update
