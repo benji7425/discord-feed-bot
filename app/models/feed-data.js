@@ -6,6 +6,7 @@ const Core = require("../../core");
 const DiscordUtil = require("../../core").util;
 const GetUrls = require("get-urls");
 const Url = require("url");
+const HtmlToText = require("html-to-text");
 
 // @ts-ignore
 const readFeed = url => promisify(require("rss-parser").parseURL)(url);
@@ -54,8 +55,8 @@ module.exports = class FeedData extends Core.BaseEmbeddedData {
         return new Promise((resolve, reject) => {
             channel.fetchMessages({ limit: 100 })
                 .then(messages => {
-					/* we want to push the links in oldest first, but discord.js returns messages newest first, so we need to reverse them
-					 * discord.js returns a map, and maps don't have .reverse methods, hence needing to spread the elements into an array first */
+          /* we want to push the links in oldest first, but discord.js returns messages newest first, so we need to reverse them
+           * discord.js returns a map, and maps don't have .reverse methods, hence needing to spread the elements into an array first */
                     [...messages.values()].reverse().forEach(m => this.cache(...GetUrls(m.content)));
                     resolve();
                 })
@@ -109,10 +110,21 @@ module.exports = class FeedData extends Core.BaseEmbeddedData {
 
 function formatPost(article) {
     let message = "";
+    let link = "";
+    let title = "";
 
-    if (article.title) message += `\n**${article.title}**`;
-    if (article.content) message += article.content.length > Config.charLimit ? "\nArticle content too long for a single Discord message!" : `\n${article.content}`;
-    if (article.link) message += `\n\n${normaliseUrlForDiscord(article.link)}`;
+    if (article.title) title = `\n**${article.title}**`;
+    if (article.link) link = `\n\n${normaliseUrlForDiscord(article.link)}`;
+
+    message += title;
+
+    if (article.content) {
+        let maxLen = Config.charLimit - title.length - link.length - 4;
+        let sanitized = HtmlToText.fromString(article.content);
+        message += sanitized.length > maxLen ? `\n${sanitized.substr(0, maxLen)}...` : `\n${sanitized}`;
+    }
+
+    message += link;
 
     return message;
 }

@@ -8,11 +8,12 @@
 	"dependencies": {
 		"@types/node": "9.3.0",
 		"discord.js": "11.2.0",
-		"eslint": "4.16.0",
+		"eslint": "4.19.1",
 		"get-urls": "7.0.0",
 		"jsonfile": "3.0.1",
 		"rss-parser": "2.12.0",
-		"shortid": "2.2.8"
+		"shortid": "2.2.8",
+		"html-to-text": "3.3.0"
 	},
 	"name": "discord-bot-rss-feed",
 	"devDependencies": {},
