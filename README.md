@@ -1,4 +1,4 @@
-[![Build status](https://badge.buildkite.com/62f486c46eee48d183946c0afee863a7e64ab349544077a38b.svg?branch=master)](https://buildkite.com/benji7425/rss-fetcher)
+![Build status](https://github.com/benjihiggins/discord-rss-feed/workflows/.github/workflows/validate.yml/badge.svg?branch=master)
 
 # Discord RSS fetcher
 A Discord bot to post the latest articles from an RSS feed into a channel, optionally mentioning a role when posting.
@@ -19,12 +19,12 @@ A community member, [Oliver4888](https://github.com/oliver4888), is kindly offer
 Please note that I cannot personally verify or take responsibility for the integrity of a community-provided bot instance.
 
 ## Getting started
-RSS Fetcher needs to be deployed before you can invite it to your Discord server. Please see [my written deployment guide](https://benji7425.io/discord-deployment) or [video tutorial](https://www.youtube.com/watch?v=DjQayKgcjGM) which can guide you through deployment even if you are a beginner.  
+RSS Fetcher needs to be deployed before you can invite it to your Discord server. Please see [my written deployment guide](https://benjihiggins.github.io/discord-deployment) or [video tutorial](https://www.youtube.com/watch?v=DjQayKgcjGM) which can guide you through deployment even if you are a beginner.  
 Once you have deployed RSS Fetcher then return here to follow the Discord setup instructions below.  
 
 This button can be used for following the Heroku deployment steps.
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/benji7425/discord-rss-fetcher)
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/benjihiggins/discord-rss-fetcher)
 
 ## Discord Setup
 
@@ -65,7 +65,7 @@ Each permission has a reason for being required, explained below.
 ## Built With
 - [Node.js](https://nodejs.org/en/) - *Runtime*
 - [discord.js](https://github.com/discordjs/discord.js) - *Discord library*
-- [disharmony](https://github.com/benji7425/disharmony) - *Bot framework*
+- [disharmony](https://github.com/benjihiggins/disharmony) - *Bot framework*
 - [rss-parser](https://github.com/bobby-brennan/rss-parser) - *RSS parsing library*
 
 ## Versioning
