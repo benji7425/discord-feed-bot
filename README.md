@@ -1,4 +1,4 @@
-![Build status](https://github.com/benjihiggins/discord-rss-feed/workflows/.github/workflows/validate.yml/badge.svg?branch=master)
+![Build status](https://github.com/benjihiggins/discord-rss-fetcher/workflows/Build%20%2B%20test/badge.svg?branch=master)
 
 # Discord RSS fetcher
 A Discord bot to post the latest articles from an RSS feed into a channel, optionally mentioning a role when posting.
