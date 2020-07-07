@@ -1,0 +1,40 @@
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  create-release:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v2
+
+      - name: Build release body
+        run: |
+          ref=${{ github.ref }} && echo "::set-env name=VERSION_NUMBER::${ref//refs\/tags\//}"
+          CHANGELOG_SUBSECTION=`sed -n "/## $VERSION_NUMBER/{:a;n;/${## v[0-9]\.[0-9]\.[0-9][-_A-Za-z0-9]*}/q;p;ba}" CHANGELOG.md`
+          CHANGELOG_SUBSECTION=${CHANGELOG_SUBSECTION//'%'/'%25'}
+          CHANGELOG_SUBSECTION=${CHANGELOG_SUBSECTION//$'\n'/'%0A'}
+          CHANGELOG_SUBSECTION=${CHANGELOG_SUBSECTION//$'\r'/'%0D'}
+          echo "::set-env name=RELEASE_BODY::$CHANGELOG_SUBSECTION"
+
+      - name: Build + push Docker image
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: benjihiggins/discord-rss-fetcher
+          tags: ${{ env.VERSION_NUMBER }}
+
+      - name: Create release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+           tag_name: ${{ env.VERSION_NUMBER }}
+           release_name: ${{ env.VERSION_NUMBER }}
+           body: ${{ env.RELEASE_BODY }}
+           draft: false
+           prerelease: false

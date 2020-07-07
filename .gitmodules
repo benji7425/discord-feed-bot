@@ -1,3 +1,0 @@
-[submodule ".buildkite/release-creator"]
-	path = .buildkite/release-creator
-	url = https://gist.github.com/9fdc833ad86c732fab549c394ab024ad.git
