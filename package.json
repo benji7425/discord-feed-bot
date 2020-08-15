@@ -9,14 +9,14 @@
     "@types/shortid": "0.0.29",
     "@types/xml2js": "^0.4.4",
     "alsatian": "^3.0.0",
-    "disharmony": "^2.0.5",
+    "disharmony": "git+https://github.com/benjihiggins/disharmony.git#v2.0.6",
     "get-urls": "^9.1.0",
     "html-to-text": "^5.1.1",
     "rss-parser": "^3.7.0",
     "shortid": "^2.2.14",
     "strongly-typed-events": "^1.4.10",
     "typemoq": "^2.1.0",
-    "typescript": "^3.4.5"
+    "typescript": "^3.9.7"
   },
   "description": "",
   "devDependencies": {
