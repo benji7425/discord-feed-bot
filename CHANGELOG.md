@@ -1,4 +1,8 @@
 # Changelog
+## v4.1.1
+### Updated
+- Package versions for typescript and disharmony
+
 ## v4.1.0
 ### Added
 - Script `monitor.js` to restart the bot daily (usage optional)

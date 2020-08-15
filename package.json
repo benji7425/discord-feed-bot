@@ -38,5 +38,5 @@
     "start": "node ./dist/index.js --name rss-fetcher",
     "test": "node --stack-trace-limit=1 ./test-runner.js"
   },
-  "version": "4.1.0"
+  "version": "4.1.1"
 }
