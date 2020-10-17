@@ -1,7 +1,7 @@
 {
-  "author": "benji7425 <benji7425@pm.me> (https://github.com/benji7425/)",
+  "author": "Benjamin Higgins <bhigginsuk@protonmail.com> (https://github.com/bhigginsuk/)",
   "bugs": {
-    "url": "https://github.com/benji7425/discord-rss-feed/issues"
+    "url": "https://github.com/bhigginsuk/discord-rss-feed/issues"
   },
   "dependencies": {
     "@types/html-to-text": "^1.4.31",
@@ -22,13 +22,13 @@
   "devDependencies": {
     "tslint": "^5.16.0"
   },
-  "homepage": "https://github.com/benji7425/discord-rss-feed#readme",
+  "homepage": "https://github.com/bhigginsuk/discord-rss-feed#readme",
   "license": "MIT",
   "main": "dist/index.js",
   "name": "discord-rss-feed",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/benji7425/discord-rss-feed.git"
+    "url": "git+https://github.com/bhigginsuk/discord-rss-feed.git"
   },
   "scripts": {
     "build": "./node_modules/.bin/tsc --project tsconfig.prod.json",
@@ -38,5 +38,5 @@
     "start": "node ./dist/index.js --name rss-fetcher",
     "test": "node --stack-trace-limit=1 ./test-runner.js"
   },
-  "version": "4.1.1"
+  "version": "4.1.2"
 }

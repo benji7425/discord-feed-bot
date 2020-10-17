@@ -1,4 +1,8 @@
 # Changelog
+## v4.1.2
+### Updated
+- Package version for disharmony; include fix for nedb issue
+
 ## v4.1.1
 ### Updated
 - Package versions for typescript and disharmony
