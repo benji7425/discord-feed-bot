@@ -1,5 +1,7 @@
 ![Build status](https://github.com/benjihiggins/discord-rss-fetcher/workflows/Build%20%2B%20test/badge.svg?branch=master)
 
+**I am no longer actively maintaining this project. It should continue to work, but I can't guarantee that I'll fix it if future Discord updates cause issues.**
+
 # Discord RSS fetcher
 A Discord bot to post the latest articles from an RSS feed into a channel, optionally mentioning a role when posting.
 
@@ -24,7 +26,7 @@ Once you have deployed RSS Fetcher then return here to follow the Discord setup 
 
 This button can be used for following the Heroku deployment steps.
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/benjihiggins/discord-rss-fetcher)
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/bhigginsuk/discord-rss-fetcher)
 
 ## Discord Setup
 
@@ -65,7 +67,7 @@ Each permission has a reason for being required, explained below.
 ## Built With
 - [Node.js](https://nodejs.org/en/) - *Runtime*
 - [discord.js](https://github.com/discordjs/discord.js) - *Discord library*
-- [disharmony](https://github.com/benjihiggins/disharmony) - *Bot framework*
+- [disharmony](https://github.com/bhigginsuk/disharmony) - *Bot framework*
 - [rss-parser](https://github.com/bobby-brennan/rss-parser) - *RSS parsing library*
 
 ## Versioning
