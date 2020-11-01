@@ -21,7 +21,7 @@ A community member, [Oliver4888](https://github.com/oliver4888), is kindly offer
 Please note that I cannot personally verify or take responsibility for the integrity of a community-provided bot instance.
 
 ## Getting started
-RSS Fetcher needs to be deployed before you can invite it to your Discord server. Please see [my written deployment guide](https://benjihiggins.github.io/discord-deployment) or [video tutorial](https://www.youtube.com/watch?v=DjQayKgcjGM) which can guide you through deployment even if you are a beginner.  
+RSS Fetcher needs to be deployed before you can invite it to your Discord server. Please see [my written deployment guide](https://gist.github.com/bhigginsuk/639b321d8ba5795e32c8cf6e46956411) or [video tutorial](https://www.youtube.com/watch?v=DjQayKgcjGM) which can guide you through deployment even if you are a beginner.  
 Once you have deployed RSS Fetcher then return here to follow the Discord setup instructions below.  
 
 This button can be used for following the Heroku deployment steps.
